@@ -5,6 +5,8 @@
     xmlns:local="using:RestaurantManager.UniversalWindows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:rc="using:RestaurantManager.Extensions"
     mc:Ignorable="d">
     <Page.Resources>
         <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
@@ -13,6 +15,10 @@
             </Border>
         </ControlTemplate>
     </Page.Resources>
+    <i:Interaction.Behaviors>
+        <rc:RightClickMessageDialogBehavior Message="Thank you for using Restaurant Manager 2.0" Title="Thanks"/>
+    </i:Interaction.Behaviors>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.40*" />
